@@ -18,7 +18,8 @@ const apiEndpoint = 'https://api.xiteit.co';
 const apiProxy = createProxyMiddleware('/api', { target: apiEndpoint, changeOrigin: true });
 app.use('/api', apiProxy);
 
-const port = process.env.RAILWAY_PORT || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Express server is running on http://localhost:${port}`);
 });
+
